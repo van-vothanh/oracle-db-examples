@@ -38,8 +38,8 @@ public class AllTables {
 	}
 
 	public String toString() {
-		return String.format("%25s %25s %25s %20d", owner, table_name,
-				status, num_rows);
+		return "%25s %25s %25s %20d".formatted(owner,table_name,
+				status,num_rows);
 
 	}
 

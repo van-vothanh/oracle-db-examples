@@ -2,10 +2,11 @@ package com.oracle.springapp.dao.impl;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
 
@@ -17,6 +18,7 @@ import com.oracle.springapp.model.Employee;
  * business logic.
  *
  */
+@DependsOnDatabaseInitialization
 @Repository
 public class EmployeeDAOImpl extends JdbcDaoSupport implements EmployeeDAO {
 	
