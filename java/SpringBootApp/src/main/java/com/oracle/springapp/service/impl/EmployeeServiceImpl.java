@@ -31,8 +31,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 		
 		System.out.println(" Displaying Table Names ");
 
-		System.out.println(String.format("%20s %20s %20s %20s \n", 
-				"OWNER", "TABLE_NAME", "STATUS", "NUM_ROWS"));
+		System.out.println("%20s %20s %20s %20s \n".formatted(
+				"OWNER","TABLE_NAME","STATUS","NUM_ROWS"));
 		
 		for(AllTables allTables: allTables_list)
 			System.out.println(allTables);
@@ -46,8 +46,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public void displayEmployees() {
 		List<Employee> employees = employeeDao.getAllEmployees();
 
-		System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s %20s \n", 
-				"EMPNO", "ENAME", "JOB", "MGR", "HIREDATE", "SALARY", "COMM", "DEPT"));
+		System.out.println("%20s %20s %20s %20s %20s %20s %20s %20s \n".formatted(
+				"EMPNO","ENAME","JOB","MGR","HIREDATE","SALARY","COMM","DEPT"));
 		
 		for(Employee employee: employees)
 			System.out.println(employee);

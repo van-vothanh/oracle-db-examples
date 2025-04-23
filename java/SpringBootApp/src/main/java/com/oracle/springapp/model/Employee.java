@@ -102,8 +102,8 @@ public class Employee {
 	}
 
 	public String toString() {
-		return String.format("%20s %20s %20s %20s %20s %20s %20s %20s", empno, name,
-				job, manager, hiredate, salary, commission, deptno);
+		return "%20s %20s %20s %20s %20s %20s %20s %20s".formatted(empno,name,
+				job,manager,hiredate,salary,commission,deptno);
 
 	}
 }
